@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ionicons.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/queries.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Furniture.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+
+    <title>YogeshFurniture</title>
+
+</head>
+
+<body>
+{% load static %}
+<header id="header">
+    <nav>
+        <div class="row">
+            <img src="{% static 'img/logo.png' %}" alt="yogesh furniture Logo" class="logo">
+            <ul class="main_nav js--main_nav">
+                <li><a href="{%url 'index' %}">HOME</a></li>
+                <li><a href="#about_me">ABOUT</a></li>
+                <li><a href="{%url 'product'%}#product" >PRODUCT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="{%url 'login' %}">Login</a></li>
+                <li><a href="{%url 'signup' %}">Signup</a></li>
+            </ul>
+            <a class="mobil_nav_icon js--nav--icon"><i class="ion-navicon-round"></i></a>
+        </div>
+
+   </nav>
+<div id="container">
+	<form action="signup" method='POST' id="myform" enctype="multipart/form-data">
+        {% load static %}
+		{% csrf_token %}
+	    <h1>Create a New Account
+<p>It’s quick and easy.</p></h1>
+
+	    <div class="input-box">
+			<input type="text" name="first_name" maxlength="50" required="" id="id_first_name" placeholder="First Name">
+
+	    </div>
+		<div class="input-box">
+			<input type="text" name="last_name" maxlength="50" required="" id="id_last_name" placeholder="Last Name">
+
+	    </div>
+         <div class="input-box">
+			 <input type="email" name="Email_id" maxlength="254" required="" id="id_Email_id" placeholder="Email Address">
+
+	    </div>
+	    <div class="input-box">
+			<input type="password" name="password" maxlength="50" required="" id="id_password" placeholder="Password">
+
+	    </div>
+		<div class="input-box">
+			<input type="password" name="confirmPassword" maxlength="50" required="" id="id_confirmPassword" placeholder="Confirm Password">
+
+	      </div>
+        <div class="input-box">
+			image:{{form.image}}
+
+	      </div>
+		 <div class="gender">
+			 <label name="gender" required="" id="id_gender">
+<input type="radio" value="0" name="gender">Male
+
+  <input type="radio" value="1" name="gender">Female
+
+  <input type="radio" value="2" name="gender">other
+			 </label>
+		 </div>
+
+
+	    <button type="submit" class="login-btn">Sign Up</button>
+	</form>
+
+</div>
+
+
+</header>
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer_nav">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="#about_me">About me</a></li>
+                <li><a href="{%url 'product' %}">PRODUCT</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="{%url 'login' %}">Login</a></li>
+                <li><a href="{%url 'signup' %}">Signup</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social_links">
+                <li><a href="https://www.facebook.com/yogeshfurniture07/" target="_blank"><i
+                        class="ion-social-facebook"></i></a></li>
+                <li><a href="mailto:yogeshfurniture07@gmail.com" target="_top"><i class="ion-social-google"></i></a>
+                </li>
+                <li><a href="#"><i class="ion-social-skype"></i></a></li>
+                <li><a href="https://www.instagram.com/budhathokisabin/" target="_blank"><i
+                        class="ion-social-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            Copyright &copy; 2010 by YogeshFurniture. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script>
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+$( "#myform" ).validate({
+  rules: {
+    field: {
+      required: true,
+      email: true
+    }
+  }
+});
+</script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        {% load static %}
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/Grid.css' %}">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/ionicons.min.css' %}">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/queries.css' %}">
+        {% load static %}
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+        <title>YogeshFurniture</title>
+        <style>
+
+            table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+        </style>
+    </head>
+<body>
+
+{% load static %}
+<header id="header">
+    <nav>
+        <div class="row">
+            <img src="{% static 'img/logo.png' %}" alt="yogesh furniture Logo" class="logo">
+            <ul class="main_nav js--main_nav">
+                <li><a href="{%url 'index' %}">HOME</a></li>
+                <li><a href="#about_me">ABOUT</a></li>
+                <li><a href="{%url 'product'%}#product">PRODUCT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="{%url 'login' %}">Login</a></li>
+                <li><a href="{%url 'signup' %}">Signup</a></li>
+
+            </ul>
+            <a class="mobil_nav_icon js--nav--icon"><i class="ion-navicon-round"></i></a>
+        </div>
+    </nav>
+
+
+    <div id="container">
+        {% load static%}
+
+        <div id="sidebar-b">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>First_Name</th>
+                    <th>Last_Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Confirm Password</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>{{ customerdash.Id }}</td>
+                    <td><img class="rounded" width="100" height="100" src="{% static '/img/' %}{{customerdash.image}}"/></td>
+                    <td>{{ customerdash.first_name }}</td>
+                    <td>{{ customerdash.last_name }}</td>
+                    <td>{{ customerdash.gender }}</td>
+                    <td>{{ customerdash.Email_id }}</td>
+                    <td>{{ customerdash.password }}</td>
+                    <td> {{ customerdash.confirmPassword }}</td>
+                    <td><a href="/useredit/{{ customerdash.Id }}">Update</a></td>
+                </tr>
+
+
+            </table>
+        </div>
+
+
+    </div>
+
+    </div><!-- main -->
+</header>
+{% load static %}
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{%static 'js/swiper.min.js' %}"></script>
+<script src="{%static 'js/jquery-3.4.1.slim.min.js' %}"></script>
+
+<script src="{%static 'js/popper.min.js' %}"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="{%static 'js/bootstrap.min.js' %}"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+
+

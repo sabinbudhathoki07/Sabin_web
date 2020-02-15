@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Grid.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ionicons.min.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/queries.css' %}">
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+    <title>YogeshFurniture</title>
+
+</head>
+
+<body>
+{% load static %}
+<header id="header">
+    <nav>
+        <div class="row">
+            <img src="{% static 'img/logo.png' %}" alt="yogesh furniture Logo" class="img-thumbnail" width="100px" height="100px">
+            <ul class="main_nav js--main_nav">
+                <li><a href="{%url 'index' %}">HOME</a></li>
+                <li><a href="#about_me">ABOUT</a></li>
+                <li><a href="{%url 'product'%}#product" >PRODUCT</a></li>
+                <li><a href="#contact">CONTACT</a></li>{% load static %}
+                <li><a href="{%url 'login' %}">Login</a></li>
+                <li><a href="{%url 'signup' %}">Signup</a></li>
+            </ul>
+            <a class="mobil_nav_icon js--nav--icon"><i class="ion-navicon-round"></i></a>
+        </div>
+    </nav>
+    {% load static %}
+    <div class="main_text">
+        <h1>MADE-TO-MEASURE FURNITURE.
+            <br>HIGH PRECISION.</h1>
+        <a class="btn btn_full js--scroll_to_form" href="#">I need new Furniture</a>
+        <a class="btn btn_ghost js--scroll_to_production" href="#">I want to know more</a>
+    </div>
+</header>
+
+<section class="section_about_me js--section_about_me" id="about_me">
+    <div class="row">
+        <div class="tomas_foto">
+            <img src="{% static 'img/kamal1.png' %}" alt="Kamal Budhathoki">
+        </div>
+        <h2>Kamal Budhathoki</h2>
+        <p class="full_info">My name is Kamal Budhathoki and I have been producing furniture since 2010. I work in Home
+            Furiture, but delivery and assembly of products anywhere in Urlabari or outside is a natural part of my
+            work. I make custom furniture in accordance with the customer's wishes. I specialize in kitchen cabinets,
+            built-in wardrobes, wardrobes, beds, corridor walls, children's rooms, living room sets and furniture for
+            schools and kindergartens.</p>
+    </div>
+    <div class="instagram">
+        <a href="https://www.instagram.com/budhathokisabin/" target="_blank"><i class="ion-social-instagram"></i></a>
+    </div>
+</section>
+{% load static %}
+<section class="section_furniture">
+    <ul class="furniture_showcase clearfix">
+        <li>
+            <figure class="furniture_photo">
+                <img src="{% static 'img/presentation/1.jpg' %}" alt="kitchen">
+            </figure>
+        </li>
+        <li>
+            <figure class="furniture_photo">
+                <img src="{% static 'img/presentation/2.png' %}" alt="table">
+            </figure>
+        </li>
+        <li>
+            <figure class="furniture_photo">
+                <img src="{% static 'img/presentation/3.png' %}" alt="bed">
+            </figure>
+        </li>
+        <li>
+            <figure class="furniture_photo">
+                <img src="{% static 'img/presentation/4.png' %}" alt="kitchen">
+            </figure>
+        </li>
+    </ul>
+    <ul class="furniture_showcase clearfix">
+        <li>
+            <figure class="furniture_photo">
+                <img src="{% static 'img/presentation/5.jpg' %}" alt="kitchen">
+            </figure>
+        </li>
+        <li>
+            <figure class="furniture_photo">
+                <img src="{% static 'img/presentation/6.jpg' %}" alt="kitchen 11">
+            </figure>
+        </li>
+        <li>
+            <figure class="furniture_photo">
+                <img src="{% static 'img/presentation/7.jpg' %}" alt="kitchen 13">
+            </figure>
+        </li>
+        <li>
+            <figure class="furniture_photo">
+                <img src="{% static 'img/presentation/8.jpg' %}" alt="kitchen 14">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<section class="section_production js--section_production" id="production">
+    <div class="row">
+        <h2>WHAT DO I OFFER?</h2>
+    </div>
+    <div class="row js--wp-1">
+        <div class="col span-1-of-4 box">
+            <i class="ion-edit icon_big"></i>
+            <h3>PROPOSAL</h3>
+            <p>I provide a complete solution design based on inspection. Design, material selection, decor and 3D
+                visualization in several versions, for your absolute satisfaction.</p>
+        </div>
+        <div class="col span-1-of-4 box">
+            <i class="ion-clock icon_big"></i>
+            <h3>PREPARATION</h3>
+            <p>Once the 3D design has been approved, I will draw mostly on the kitchen cabinets on the spot how to run
+                installations such as water, sewage, electrical plugs for built-in appliances and also LED lighting.</p>
+        </div>
+        <div class="col span-1-of-4 box">
+            <i class="ion-hammer icon_big"></i>
+            <h3>PRODUCTION</h3>
+            <p>I only use quality materials from the Austrian company Egger. All fittings are supplied with a lifetime
+                warranty from Blum (Austria). As a standard, I use 2mm ABS edges for cabinet cabinets, drawers or
+                built-in cabinets, which guarantees long product life.</p>
+        </div>
+        <div class="col span-1-of-4 box">
+            <i class="ion-wrench icon_big"></i>
+            <h3>MOUNTING</h3>
+            <p>Of course there is a final assembly on site, which is included in the price of each order. Transport and
+                removal of individual parts of furniture, functional testing and adjustment of all fittings during
+                assembly.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section_testimonials" id="recommendation">
+    <div class="row">
+        <h2>THERE IS NOTHING BETTER THAN A SATISFIED CUSTOMER.</h2>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-3">
+            <blockquote>
+                At Yogesh Furniture I had a kitchen made to measure. Exceeded all expectations. Excellent communication,
+                access and speed of production and assembly. It certainly wasn't the last thing we made.
+                <cite><img src="{% static 'img/yogesh.png' %}" alt="Yogesh Budhathoki">Hari Khannal</cite>
+            </blockquote>
+        </div>
+        <div class="col span-1-of-3">
+            <blockquote>
+                Yogesh Furniture produced all built-in wardrobes in the apartment. I would never choose another joiner.
+                His professional approach and the precision of his work should set an example for every furniture
+                manufacturer.
+                <cite><img src="{% static 'img/kamal.png' %}" alt="Kamal Budhathoki">Ram Budhathoki</cite>
+            </blockquote>
+        </div>
+        <div class="col span-1-of-3">
+            <blockquote>
+                At Yogesh Furniture I had a kitchen unit. I was satisfied with the work from the very beginning to the
+                final assembly in our home. I recommend to anyone who appreciates the joinery art and sophisticated
+                details.
+
+                <cite><img src="{% static 'img/sabin.png' %}" alt="Sabin Budhathoki">Sabin Budhathoki</cite>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<section class="section_form js--section_form" id="contact">
+    <div class="row">
+        <h2>PLEASE FEEL FREE TO CONTACT ME.</h2>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <div class="contact_information">
+                <h3>CONTACT</h3>
+                <div class="address">
+                    <p>Urlabari-7<br>Morang,Nepal<br>PAN 0900 0000 0050 4317</p>
+                </div>
+                <div class="phone_number">
+                    <i class="ion-ios-telephone icon_small"></i>
+                    +977 9876543210
+                </div>
+
+                <div class="email_address">
+                    <i class="ion-ios-email icon_small"></i>
+                    yogeshfurniture@gmail.com
+                </div>
+                <div class="facebook_icon icon_small">
+                    <i class="ion-social-facebook icon_small"></i>
+                    <a href="https://www.facebook.com/yogeshfurniture07/" target="_blank" class="facebook_link"> yogesh
+                        furniture </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <form method="post" action="CustomerMessage" class="BookingItems">
+                    {% csrf_token %}
+                    <div class="row row_form">
+                        <input type="text" name="name" id="id_name" placeholder="Full Name" required>
+                    </div>
+                    <div class="row row_form">
+                        <input type="number" name="telefon" id="id_telefon" placeholder="Quality">
+                    </div>
+                    <div class="row row_form">
+                        <input type="email" name="email" id="id_email" placeholder="Email id" required>
+                    </div>
+                    <div class="row row_form">
+                        <textarea name="Describe" placeholder="Describe" id="id_Describe"></textarea>
+                    </div>
+                    <div class="row row_form">
+                        <input type="submit" value="To Send!" onclick="alert('Your request Has been Send')">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer_nav">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="#about_me">About me</a></li>
+                <li><a href="{%url 'product' %}">PRODUCT</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="{%url 'login' %}">Login</a></li>
+                <li><a href="{%url 'signup' %}">Signup</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social_links">
+                <li><a href="https://www.facebook.com/yogeshfurniture07/" target="_blank"><i
+                        class="ion-social-facebook"></i></a></li>
+                <li><a href="mailto:yogeshfurniture07@gmail.com" target="_top"><i class="ion-social-google"></i></a>
+                </li>
+                <li><a href="#"><i class="ion-social-skype"></i></a></li>
+                <li><a href="https://www.instagram.com/budhathokisabin/" target="_blank"><i
+                        class="ion-social-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            Copyright &copy; 2010 by YogeshFurniture. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+{% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+
+</html>
