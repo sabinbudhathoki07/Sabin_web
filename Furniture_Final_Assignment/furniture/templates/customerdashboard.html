@@ -40,12 +40,12 @@ th {
         </style>
     </head>
 <body>
-
+{% block content %}
 {% load static %}
 <header id="header">
     <nav>
         <div class="row">
-            <img src="{% static 'img/logo.png' %}" alt="yogesh furniture Logo" class="logo">
+           <a href="{%url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="yogesh furniture Logo" class="img-thumbnail" width="100px" height="100px"></a>
             <ul class="main_nav js--main_nav">
                 <li><a href="{%url 'index' %}">HOME</a></li>
                 <li><a href="#about_me">ABOUT</a></li>
@@ -109,6 +109,7 @@ th {
 <script src="{%static 'js/bootstrap.min.js' %}"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+{% endblock %}
 </body>
 
 

@@ -101,11 +101,12 @@ font-family: "Times New Roman", Times, serif;
 </style>
     </head>
 <body>
+{% block content %}
 <header>
 
     <nav>
         <div class="row">
-            <img src="{% static 'img/logo.png' %}" alt="yogesh furniture Logo" class="logo">
+            <img src="{% static 'img/logo.png' %}" alt="yogesh furniture Logo" class="img-thumbnail" width="100px" height="100px">
             <ul class="main_nav js--main_nav">
                 <li><a href="{%url 'index' %}">HOME</a></li>
                 <li><a href="#about_me">ABOUT</a></li>
@@ -226,21 +227,6 @@ font-family: "Times New Roman", Times, serif;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div id="sidebar-b">
         <table class="table table-striped">
             <thead class="thead-dark">
@@ -329,7 +315,7 @@ font-family: "Times New Roman", Times, serif;
 <script src="{%static 'js/bootstrap.min.js' %}"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
+{% endblock %}
 </body>
 
 

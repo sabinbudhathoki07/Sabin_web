@@ -1,3 +1,4 @@
+{% block content %}
 <form action="EmployeeAddition" method="POST" class="form-style-9">
     {% load static %}
     {% csrf_token %}
@@ -34,6 +35,7 @@
         </li>
     </ul>
 </form>
+{% endblock %}
 
 
 <style type="text/css">

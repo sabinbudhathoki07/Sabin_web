@@ -1,3 +1,4 @@
+{% block content %}
 <form class="form-style-9" method="POST" action="/update/{{comemployee.employee_id}}" enctype="multipart/form-data">
     {% csrf_token %}
     <h1 class="text-success text-center">
@@ -34,7 +35,7 @@
         </li>
     </ul>
 </form>
-
+{% endblock %}
 
 <style type="text/css">
 .form-style-9{
